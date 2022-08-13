@@ -36,7 +36,7 @@ public class CSVHelper {
             Person existingPerson = repository.findByName(name);
             if(existingPerson != null){
                 existingPerson.setSalary(salary);
-                repository.save(existingPerson);
+                persons.add(existingPerson);
             }
             else{
                 Person person = new Person();
